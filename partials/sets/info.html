@@ -1,10 +1,11 @@
-<table>
+<table width="100%">
 {% for structure in itemset.hydrated_members %}
 <tr>
     <td><strong><a href="/structures/view/{{structure.pdb_code}}">{{structure.pdb_code | upper}}</a>&nbsp;&nbsp;</strong></td>
     {% if structure %}
     <td>
-        <p>{{structure.core | structure_title | safe}}</p>
+        <div>{{structure.core | full_structure_title | safe}}</div>
+        <br />
     </td>
     {% endif %}
 </tr>
