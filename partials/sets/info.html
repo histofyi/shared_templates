@@ -1,7 +1,13 @@
 <table>
-    {% for structure in itemset.hydrated_members %}
-    <tr>
-        <td><p><strong>{{structure.pdb_code|upper}}&nbsp;&nbsp;&nbsp;</strong></p></td><td><p>{{ structure.core.allele | class_i_display_name }}&nbsp;</p></td><td><p> binding {{structure.core.peptide.sequence}}</p></td><td><p> at {{structure.core.resolution | resolution_display | safe}} resolution</p></td><td>{{structure.core.organism.common_name|capitalize}}</td>
-    </tr>
-    {% endfor %}
+{% for structure in itemset.hydrated_members %}
+<tr>
+    <td><strong><a href="/structures/view/{{structure.pdb_code}}">{{structure.pdb_code | upper}}</a>&nbsp;&nbsp;</strong></td>
+    {% if structure %}
+    <td>
+        <p>{{structure.core | structure_title | safe}}</p>
+    </td>
+    {% endif %}
+</tr>
+{% endfor %}
+
 </table>

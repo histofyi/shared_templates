@@ -2,7 +2,12 @@
 
 {% block main %}
 
+<style>
+  td {
+    vertical-align: top;
+  }
 
+</style>
 <section class="vertical-spacing-top">
   <div class="grid-container">
     <div class="column-full-width">
@@ -12,8 +17,8 @@
             <div>{% if not filtered %}Last updated {{itemset.last_updated|timesince}} | {% endif %}{{itemset.pagination.total}} items</div>
             <br /><hr />
             <p>Page {{itemset.pagination.current_page}} of {{itemset.pagination.page_count}} | {{itemset.pagination.page_size}} items per page</p>
-        {% include "fragments/set_pagination.html" %}
-        <hr />
+          {% include "shared/partials/sets/pagination.html" %}
+          <hr />
         {% else %}
         <h1 class="vertical-spacing-bottom-0-25">Ooops, we've got a problem  </h1>
         {% endif %}
@@ -33,7 +38,7 @@
         </div>
         {% if itemset %}
         <hr />
-        {% include "fragments/set_pagination.html" %}
+        {% include "shared/partials/sets/pagination.html" %}
         {% endif %}
       </div>
     </div>

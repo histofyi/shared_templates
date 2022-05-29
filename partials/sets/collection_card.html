@@ -1,0 +1,11 @@
+<div class="grid-column proto-pipeline-phase">
+    <div class="inner">
+        <span class="phase-title is-{{collection_colours[item.context]}}"><a href="/structures/sets/browse/{{item.context}}/{{item.metadata.slug}}">{{item.metadata.title| collection_title | capitalize}}</a></span>
+        <span class="heading-extra-large phase-count"><a href="#">{{item.members|count}}</a></span>
+        <p class="small">
+            Last updated:<br />
+            {{item.last_updated | timesince}}
+        </p>    
+        <br />
+    </div>
+</div>
