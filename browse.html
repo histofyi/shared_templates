@@ -23,6 +23,7 @@
         <h1 class="vertical-spacing-bottom-0-25">Ooops, we've got a problem  </h1>
         {% endif %}
         <div class="vertical-spacing-top vertical-spacing-bottom">
+          {% set structures = itemset.hydrated_members %}
           {% if facet_display == 'info' %}
             {% include "shared/partials/sets/info.html" %}
           {% elif facet_display == 'peptide_angles' %}

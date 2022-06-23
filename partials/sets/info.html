@@ -1,5 +1,5 @@
 <table width="100%">
-{% for structure in itemset.hydrated_members %}
+{% for structure in structures %}
 <tr>
     <td><strong><a href="/structures/view/{{structure.pdb_code}}">{{structure.pdb_code | upper}}</a>&nbsp;&nbsp;</strong></td>
     {% if structure %}
@@ -10,5 +10,4 @@
     {% endif %}
 </tr>
 {% endfor %}
-
 </table>
