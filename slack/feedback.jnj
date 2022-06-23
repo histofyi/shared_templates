@@ -1,0 +1,32 @@
+{
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": ":rotating_light: New {{feedback_type}} feedback :rotating_light:"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "From *{{name}}* [ {{email}} ]"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "\"{{feedback}}\""
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "`https://www.histo.fyi{{url}}`"
+			}
+		}
+	]
+}
