@@ -1,0 +1,16 @@
+<footer class="footer top-border">
+    <div class="grid-container">
+      <div class="column-full-width">
+        <div class="inner">
+            {% include "shared/svgs/logo.svg" %}
+            <p>
+              <smaller>
+              Site version: <a href="/changelog">{{current_site_version}}</a>
+              /
+              Dataset version: {{current_data_version}}
+              </smaller>
+            </p>
+        </div>
+      </div>
+    </div>
+</footer>

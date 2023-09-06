@@ -1,0 +1,10 @@
+{% if set %}
+<div class="grid-column full-proto-pipeline-phase proto-pipeline-phase {{collection_colours[collection.slug]}}">
+    <div class="inner">
+        <span class="phase-title {%if collection.slug == 'complex_types'%}complex-phase-title{% else%}full-phase-title{% endif%} is-{{collection_colours[collection.slug]}}"><a href="/structures/browse/{{collection.slug}}/{{set.slug}}">{% if collection.slug in ['complex_types','alleles','allele_groups'] %}{{set.title}}{% else %}{{set.slug | deslugify | capitalize}}{% endif %}</a></span>
+        <span class="heading-extra-large phase-count"><a href="/structures/browse/{{collection.slug}}/{{set.slug}}">{{set.count}}</a></span>
+        <br />
+        structure{% if set.count != 1 %}s{% endif %}
+    </div>
+</div>
+{% endif %}
