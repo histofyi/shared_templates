@@ -63,13 +63,17 @@
         <div class="grid-container">
           <div class="column-full-width">
             <div class="inner">
+              {% if phase_banner %}
               <div class="phase-banner">
                 <span class="phase-label is-alpha">Alpha</span>
                 <span class="phase-notice">This is a work in progress and may change. Your <a href="/feedback?url={{request.path}}&feedback_type=alpha">feedback</a> is very welcome.</span>
                 <hr />
               </div>
-              <div class="vertical-spacing-top-0-2-5">
-                {% include "shared/components/search_bar.html" %}
+              {% endif %}
+              <div class="vertical-spacing-top-0-5">
+                {% block breadcrumbs %}
+                  {% include "shared/components/search_bar.html" %}
+                {% endblock %}
               </div>
             </div>
           </div>
